@@ -24,7 +24,7 @@ self.addEventListener('fetch', function (event) {
                   return response;
                 }
                 var responseToCache = response.clone();
-                caches.open(CACHE_VERSION)
+                caches.open(cacheStorageKey)
                   .then(function(cache){
                     cache.put(requestToCache, responseToCache);
                   });
@@ -34,4 +34,3 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
-
