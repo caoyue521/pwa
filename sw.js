@@ -1,10 +1,8 @@
 
 var cacheStorageKey = 'minimal-pwa-1'
 var cacheList=[
-  '/',
-  'index.html',
-  'main.css',
-  'youhun.jpg'
+  '/index.html',
+  '/main.css'
 ]
 self.addEventListener('install',e =>{
   e.waitUntil(
